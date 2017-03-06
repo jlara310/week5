@@ -56,10 +56,21 @@ const PUBLIC_KEY_CONFIG = array(
 );
 
 function generate_keys($config=PUBLIC_KEY_CONFIG) {
-  $private_key = 'Ha ha!';
-  $public_key = 'Ho ho!';
+ //$private_key = 'Ha ha!';
+ // $public_key = 'Ho ho!';
+//return array('private' => $private_key, 'public' => $public_key);
+  $resource = openssl_pkey_new($config);
 
-  return array('private' => $private_key, 'public' => $public_key);
+  // Extract private key from the pair
+  openssl_pkey_export($resource, $private_key);
+
+  // Extract public key from the pair
+  $key_details = openssl_pkey_get_details($resource);
+  $public_key = $key_details["key"];
+
+  $keys = array('private' => $private_key, 'public' => $public_key);
+
+  return $keys;
 }
 
 function pkey_encrypt($string, $public_key) {
