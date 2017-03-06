@@ -7,14 +7,18 @@ Time spent: **X** hours spent in total
 The following **required** functionality is completed:
 
 1\. Symmetric Encrypt/Decrypt
-  * [ ]  Required: Repair the symmetric encrypt and decrypt code
+  * [x]  Required: Repair the symmetric encrypt and decrypt code
 
 2\. Encrypted Message 1
-  * [ ]  Required: Decrypt the government message
-  * [ ]  Required: Encrypt a response and include in this README
+  * [x]  Required: Decrypt the government message
+  * [x]  Required: Encrypt a response and include in this README
+
+  Encrypted Response:
+
+  a6LIu1myGXhxgzSIbCiWbGV4N8w5c25wyNKb9siXaO1FT+jXs/+CbtKkqbo7U9YG1RkujuRUovuiqikkZtFzJw==
 
 3\. Generate Public-Private Keys
-  * [ ]  Required: Repair the key generator code
+  * [x]  Required: Repair the key generator code
   * [ ]  Required: Generate keys for "johnsteed" and add him to the Agent Directory
 
 4\. Asymmetric Encrypt/Decrypt
